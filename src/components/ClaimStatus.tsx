@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { submitClaim, fetchClaim } from '@/lib/api';
 import { getConnectedWallet } from '@/lib/stellar';
-import { Loader2 } from 'lucide-react';
+const Loader2 = ({ className }: { className?: string }) => <span className={className}>⟳</span>;
 
 interface Props {
   policyId: string;

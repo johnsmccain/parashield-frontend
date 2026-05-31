@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import type { Product } from '@/lib/api';
 import { connectFreighter, getConnectedWallet } from '@/lib/stellar';
-import { X, Loader2 } from 'lucide-react';
+// icons inline to avoid lucide-react install issues on cold build
+const X = () => <span style={{fontSize:'18px'}}>✕</span>;
+const Loader2 = ({ className }: { className?: string }) => <span className={className}>⟳</span>;
 
 interface Props {
   product: Product;
